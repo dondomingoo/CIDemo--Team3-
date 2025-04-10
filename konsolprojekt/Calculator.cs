@@ -16,6 +16,15 @@ namespace konsolprojekt
             if (b == 0) throw new DivideByZeroException("Division by zero not allowed.");
             return (double)a / b;
         }
+        public double Power(double a, double b)
+        {
+            return Math.Pow(a, b);
+        }
+        public double SquareRoot(double a)
+        {
+            if (a < 0) throw new ArgumentException("Cannot calculate square root of a negative number.");
+            return Math.Sqrt(a);
+        }
 
     }
 }

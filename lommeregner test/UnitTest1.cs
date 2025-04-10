@@ -43,5 +43,30 @@ namespace lommeregner_test
         {
             Assert.Throws<DivideByZeroException>(() => calculator.Divide(10, 0));
         }
+        [Fact]
+        public void Power_ReturnsCorrectResult()
+        {
+            double result = calculator.Power(2, 3);
+            Assert.Equal(8.0, result);
+        }
+        [Fact]
+        public void Power_NegativeBase_ReturnsCorrectResult()
+        {
+            double result = calculator.Power(-2, 3);
+            Assert.Equal(-8.0, result);
+        }
+
+        [Fact]
+        public void SquareRoot_ReturnsCorrectResult()
+        {
+            double result = calculator.SquareRoot(16);
+            Assert.Equal(4.0, result);
+        }
+        [Fact]
+        public void SquareRoot_NegativeNumber_ThrowsException()
+        {
+            Assert.Throws<ArgumentException>(() => calculator.SquareRoot(-4));
+        }
+
     }
 }
