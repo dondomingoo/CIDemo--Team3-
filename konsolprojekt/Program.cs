@@ -27,42 +27,86 @@
                     {
                         case "1":
                             Console.Write("Indtast første tal: ");
-                            int a1 = int.Parse(Console.ReadLine());
+                            if (!int.TryParse(Console.ReadLine(), out int a1))
+                            {
+                                Console.WriteLine("Ugyldigt input. Prøv igen.");
+                                break;
+                            }
                             Console.Write("Indtast andet tal: ");
-                            int b1 = int.Parse(Console.ReadLine());
+                            if (!int.TryParse(Console.ReadLine(), out int b1))
+                            {
+                                Console.WriteLine("Ugyldigt input. Prøv igen.");
+                                break;
+                            }
                             Console.WriteLine("Resultat: " + calculator.Add(a1, b1));
                             break;
                         case "2":
                             Console.Write("Indtast første tal: ");
-                            int a2 = int.Parse(Console.ReadLine());
+                            if (!int.TryParse(Console.ReadLine(), out int a2))
+                            {
+                                Console.WriteLine("Ugyldigt input. Prøv igen.");
+                                break;
+                            }
                             Console.Write("Indtast andet tal: ");
-                            int b2 = int.Parse(Console.ReadLine());
+                            if (!int.TryParse(Console.ReadLine(), out int b2))
+                            {
+                                Console.WriteLine("Ugyldigt input. Prøv igen.");
+                                break;
+                            }
                             Console.WriteLine("Resultat: " + calculator.Subtract(a2, b2));
                             break;
                         case "3":
                             Console.Write("Indtast første tal: ");
-                            int a3 = int.Parse(Console.ReadLine());
+                            if (!int.TryParse(Console.ReadLine(), out int a3))
+                            {
+                                Console.WriteLine("Ugyldigt input. Prøv igen.");
+                                break;
+                            }
                             Console.Write("Indtast andet tal: ");
-                            int b3 = int.Parse(Console.ReadLine());
+                            if (!int.TryParse(Console.ReadLine(), out int b3))
+                            {
+                                Console.WriteLine("Ugyldigt input. Prøv igen.");
+                                break;
+                            }
                             Console.WriteLine("Resultat: " + calculator.Multiply(a3, b3));
                             break;
                         case "4":
                             Console.Write("Indtast første tal: ");
-                            int a4 = int.Parse(Console.ReadLine());
+                            if (!int.TryParse(Console.ReadLine(), out int a4))
+                            {
+                                Console.WriteLine("Ugyldigt input. Prøv igen.");
+                                break;
+                            }
                             Console.Write("Indtast andet tal: ");
-                            int b4 = int.Parse(Console.ReadLine());
+                            if (!int.TryParse(Console.ReadLine(), out int b4))
+                            {
+                                Console.WriteLine("Ugyldigt input. Prøv igen.");
+                                break;
+                            }
                             Console.WriteLine("Resultat: " + calculator.Divide(a4, b4));
                             break;
                         case "5":
                             Console.Write("Indtast tal: ");
-                            double baseNum = double.Parse(Console.ReadLine());
+                            if (!double.TryParse(Console.ReadLine(), out double baseNum))
+                            {
+                                Console.WriteLine("Ugyldigt input. Prøv igen.");
+                                break;
+                            }
                             Console.Write("Indtast eksponent: ");
-                            double exponent = double.Parse(Console.ReadLine());
+                            if (!double.TryParse(Console.ReadLine(), out double exponent))
+                            {
+                                Console.WriteLine("Ugyldigt input. Prøv igen.");
+                                break;
+                            }
                             Console.WriteLine("Resultat: " + calculator.Power(baseNum, exponent));
                             break;
                         case "6":
                             Console.Write("Indtast tal: ");
-                            double sqr = double.Parse(Console.ReadLine());
+                            if (!double.TryParse(Console.ReadLine(), out double sqr))
+                            {
+                                Console.WriteLine("Ugyldigt input. Prøv igen.");
+                                break;
+                            }
                             Console.WriteLine("Resultat: " + calculator.SquareRoot(sqr));
                             break;
                         default:
